@@ -1,0 +1,182 @@
+                    #contenedor {
+                        width: 970px;
+                        margin: 0px auto;
+                    }
+                    
+                    .bloque1 {
+                        width: 970px;
+                        background: linear-gradient(#f1f1f1, #fdfdfd);
+                        color: black;
+                    }
+                    
+                    #jayne-doe {
+                        width: 570px;
+                        height: 60px;
+                        display: inline-block;
+                        vertical-align: top;
+                        padding-left: 20px;
+                        font-family: "Comic sans MS";
+                        font-size: 30px;
+                        font-weight: bold;
+                    }
+                    
+                    #master-of {
+                        width: 350px;
+                        height: 60px;
+                        display: inline-block;
+                        vertical-align: top;
+                        padding-top: 25px;
+                        font-weight: bold;
+                        font-size: 20px;
+                        font-family: Arial;
+                    }
+                    
+                    .bloque2 {
+                        width: 950px;
+                        background: radial-gradient(circle, #6f5964, #1e0e12);
+                        padding: 10px;
+                        font-family: Arial;
+                    }
+                    
+                    .img1 {
+                        display: inline-block;
+                        vertical-align: top;
+                    }
+                    
+                    #imagen1 {
+                        width: 435px;
+                        border: 5px solid #c0c0c0;
+                        margin: 10px;
+                    }
+                    
+                    #bloque3 {
+                        width: 455px;
+                        height: 295px;
+                        background: linear-gradient(to left, #c0c0c0, #fefefe);
+                        display: inline-block;
+                        vertical-align: top;
+                        margin: 10px;
+                    }
+                    
+                    .subtitulos1 {
+                        width: 445px;
+                        height: 40px;
+                        background: linear-gradient(to top, #b2b1b5, #898795, #b2b1b5);
+                        display: inline-block;
+                        color: white;
+                        font-weight: bold;
+                        font-size: 20px;
+                        padding-left: 10px;
+                        line-height: center;
+                        display: flex;
+                        align-items: center;
+                    }
+                    
+                    .acercade1 {
+                        width: 435px;
+                        padding: 10px;
+                    }
+                    
+                    .bloque4-5-6 {
+                        width: 292px;
+                        height: 410px;
+                        background: linear-gradient(to left, #c0c0c0, #fefefe);
+                        display: inline-block;
+                        vertical-align: top;
+                        margin-top: 10px;
+                        margin-left: 10px;
+                        margin-right: 10px;
+                        text-align: justify;
+                        font-size: 15px;
+                    }
+                    
+                    .recuadro-contenido {
+                        width: 272px;
+                        min-height: 300px;
+                        padding: 10px;
+                    }
+                    
+                    .subtitulos2 {
+                        width: 282px;
+                        height: 40px;
+                        background: linear-gradient(to top, #b2b1b5, #898795, #b2b1b5);
+                        display: inline-block;
+                        padding-left: 10px;
+                        color: white;
+                        font-weight: bold;
+                        font-size: 20px;
+                        line-height: center;
+                        display: flex;
+                        align-items: center;
+                    }
+                    
+                    .imagen2-3-4 {
+                        width: 292px
+                    }
+                    
+                    .bloque7-8-9 {
+                        width: 292px;
+                        height: 200px;
+                        background: linear-gradient(to left, #c0c0c0, #fefefe);
+                        display: inline-block;
+                        vertical-align: top;
+                        margin-left: 10px;
+                        margin-right: 10px;
+                        margin-bottom: 10px;
+                    }
+                    
+                    .subtitulos3 {
+                        width: 282px;
+                        height: 30px;
+                        background: linear-gradient(to top, #b2b1b5, #898795, #b2b1b5);
+                        display: inline-block;
+                        padding-left: 10px;
+                        color: white;
+                        font-weight: bold;
+                        font-size: 17px;
+                        display: flex;
+                        align-items: center;
+                    }
+                    
+                    .logotec {
+                        width: 272px;
+                        padding: 10px;
+                    }
+                    
+                    .logos {
+                        width: 40px;
+                        margin: 5px;
+                    }
+                    
+                    .boton1 {
+                        width: auto;
+                        height: 50px;
+                        background-color: #407d61;
+                        margin-left: 100px;
+                        color: white;
+                        font-weight: bold;
+                        font-style: none;
+                        font-size: 12px;
+                        padding: 5px;
+                        border-radius: 10px;
+                        border: solid 2px #33664f;
+                        text-decoration: none;
+                    }
+                    
+                    #contacto {
+                        width: 970px;
+                        height: 100px;
+                        background: linear-gradient(#f1f1f1, #fdfdfd);
+                        color: black;
+                        display: inline-block;
+                        text-align: center;
+                    }
+                    
+                    #rrssdatos {
+                        font-style: italic;
+                        text-decoration: underline;
+                    }
+                    
+                    .rrss {
+                        width: 20px;
+                    }

@@ -1,0 +1,90 @@
+/*CSS reset settings here*/
+
+* {
+    margin: 0px;
+    padding: 0px;
+}
+
+#contenedor {
+    width: 970px;
+    background-color: #1b345d;
+    margin: 0px auto;
+    padding: 10px;
+}
+
+#titulo {
+    min-height: 10px;
+    background-color: #cf3036;
+    margin-bottom: 15px;
+    padding: 15px;
+    color: #c2d6ec;
+    border-radius: 5px;
+    font-family: serif;
+}
+
+#home {
+    min-height: 180px;
+    width: 150px;
+    background-color: #2a7d8c;
+    display: inline-block;
+    margin-right: 15px;
+    vertical-align: top;
+    color: #59bfbc;
+    border-radius: 15px;
+    padding: 15px;
+    font-size: small;
+    font-family: serif;
+}
+
+#home1 {
+    margin-left: 15px;
+    text-decoration-color: #59bfbc;
+}
+
+#home2 {
+    margin-left: 25px;
+}
+
+#descripcion-jsb {
+    height: 400px;
+    width: 730px;
+    background-color: #0e1822;
+    display: inline-block;
+    vertical-align: top;
+    padding: 20px;
+    color: #bfd3e8;
+    border-radius: 15px;
+    font-size: small;
+    font-family: serif;
+}
+
+#desc-2 {
+    margin-top: 5px;
+    margin-bottom: 10px;
+}
+
+#contenido {
+    margin-left: 20px;
+    font-size: small;
+}
+
+.subt-contenid {
+    color: #59bfbc;
+    text-decoration: underline;
+}
+
+.negrita {
+    color: #556ef8;
+}
+
+#url {
+    min-height: 10px;
+    width: 940px;
+    background-color: #5d6673;
+    margin-top: 15px;
+    padding: 15px;
+    color: #b2c7df;
+    border-radius: 15px;
+    font-family: serif;
+    font-size: small;
+}

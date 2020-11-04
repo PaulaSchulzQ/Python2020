@@ -1,0 +1,45 @@
+h1 {
+    color: blue;
+}
+
+#importante {
+    font-size: 36px;
+}
+
+.probando {
+    background-color: green;
+    border: 1px solid black;
+}
+
+img {
+    width: 250px;
+}
+
+div {
+    overflow: scroll;
+}
+
+p {
+    background-color: rgb(32, 119, 131)147, 147, 158);
+}
+
+div {
+    background-image: url("harry-potter-ficcion.jpg");
+    background-position: center;
+    background-size: auto;
+    background-repeat: no-repeat;
+}
+
+h1 span {
+    font-weight: bold;
+    color: blue;
+}
+
+#nav-menu {
+    list-style-type: none;
+    /*This gets rid of the bullets.*/
+}
+
+#nav-menu li {
+    display: inline;
+}

@@ -1,0 +1,75 @@
+#contenedor {
+    background-color: white;
+}
+
+.bloque1 {
+    background-color: #b3b3b3;
+    padding: 10px;
+}
+
+.bloque2 {
+    background-color: #cccccc;
+    padding: 2px;
+    padding-left: 10px;
+}
+
+.bloque3 {
+    background-color: #ffff9a;
+    padding: 2px;
+    padding-left: 10px;
+}
+
+.marginborder {
+    margin-top: 5px;
+    margin-left: 5px;
+    margin-right: 5px;
+    border: #d5ccb3 solid 1px;
+}
+
+.titulo {
+    font-size: 30px;
+    font-weight: bold;
+}
+
+.negrita {
+    font-weight: bold;
+}
+
+@media only screen and (max-width:480px) {
+    .lg {
+        display: none;
+    }
+    .med {
+        display: none;
+    }
+    .sm {
+        width: 100%;
+        display: block;
+    }
+}
+
+@media only screen and (min-width:481px) {
+    .lg {
+        display: none;
+    }
+    .med {
+        width: 100%;
+        display: block;
+    }
+    .sm {
+        display: none;
+    }
+}
+
+@media only screen and (min-width: 1024px) {
+    .lg {
+        width: 100%;
+        display: block;
+    }
+    .med {
+        display: none;
+    }
+    .sm {
+        display: none;
+    }
+}
