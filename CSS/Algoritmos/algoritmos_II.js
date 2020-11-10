@@ -4,7 +4,7 @@ function a() {
     console.log('hello');
 }
 console.log('Dojo');
-//R:'Dojo',
+//Resp:'Dojo'
 
 /** 2 **/
 function a() {
@@ -13,7 +13,7 @@ function a() {
 }
 x = a(); //x = 15
 console.log('x is', x); // 'x is 15'
-//R:'hello','x is 15'
+//Resp:'hello','x is 15'
 
 /** 3 **/
 function a(n) { //n=3
@@ -23,7 +23,7 @@ function a(n) { //n=3
 x = a(3); //x = 18
 console.log('x is', x);
 
-//R:'n is 3','x is 18'
+//Resp:'n is 3','x is 18'
 
 /** 4 **/
 function a(n) { //n=5
@@ -31,9 +31,9 @@ function a(n) { //n=5
     y = n * 2; //10
     return y; //return 10
 }
-x = a(3) + a(5); //x = 6 + 10 = x= 16
+x = a(3) + a(5); //x = 6 + 10 => x= 16
 console.log('x is', x);
-//R:'n is 3','n is 5','x is 16'
+//Resp:'n is 3','n is 5','x is 16'
 
 /** 5 **/
 function op(a, b) { //a=3;b=5
@@ -41,24 +41,25 @@ function op(a, b) { //a=3;b=5
     console.log('c is', c);
     return c; //return 8
 }
-x = op(2, 3) + op(3, 5); //x= 5 + 8 > x  = 13
+x = op(2, 3) + op(3, 5); //x= 5 + 8 => x  = 13
 console.log('x is', x);
 
-//R: 'c is 5','c is 8','x is 13'
+//Resp: 'c is 5','c is 8','x is 13'
 
 /** 6 **/
-function op(a, b) { //a=; b= 
-    c = a + b; //c = 
+function op(a, b) { //a= 2; b= 3
+    c = a + b; //c = 5
     console.log('c is', c);
-    return c; // return 
+    return c; // return 5
 }
 x = op(2, 3) + op(3, op(2, 1)) + op(op(2, 1), op(2, 3));
-//x= 5+ op(3, 3)+ op(op(2, 1), op(2, 3))
-//x= 5 + 6 + op(3,5) 
+//x= 5 + op(3, 3)+ op(op(2, 1), op(2, 3))
+//x= 5 + op(3, 3) + op(3, 5)
+//x= 5 + 6 + op(3, 5) 
 //x= 5+6+8 >19 ; x= 19
 console.log('x is', x)
 
-//R: 'c is 5','c is 3','c is 6','c is 3','c is 5','c is 8','x is 19'
+//Resp: 'c is 5','c is 3','c is 6','c is 3','c is 5','c is 8','x is 19'
 
 /** 7 **/
 var x = 15;
@@ -69,7 +70,9 @@ function a() {
 console.log(x);
 a();
 console.log(x);
-//R: 15,15
+//Resp: 15, 15
+
+//PARTE 2 ACTIVIDAD//
 
 /** 8 **/
 function multiply(x, y) { //x= 2, y =3
@@ -78,7 +81,7 @@ function multiply(x, y) { //x= 2, y =3
 }
 b = multiply(2, 3); //b= undefined
 console.log(b);
-//R: 2,3, undefined
+//Resp: 2, 3, undefined
 
 /** 9 **/
 
@@ -87,8 +90,8 @@ function multiply(x, y) { //x=5,y=2
 }
 b = multiply(2, 3); //b= 6
 console.log(b);
-console.log(multiply(5, 2)); //console.log(10) > 10
-//R: 6,10
+console.log(multiply(5, 2)); //console.log(10) => 10
+//Resp: 6, 10
 
 /** 10 **/
 var x = [1, 2, 3, 4, 5, 10]; //x= []
@@ -110,13 +113,13 @@ console.log(x); //X=15
 awesome(); //X=10
 console.log(x); //X=15
 
-//R:15,15,10,15
+//Resp: 15, 15, 10, 15
 
 /** 12 **/
-for (var i = 0; i < 15; i += 2) { // i = i+2  
-    console.log(i); //i=0>2>4>6>8>10>12>14>16  
+for (var i = 0; i < 15; i += 2) { //i=0>2>4>6>8>10>12>14>16 // i = i+2  
+    console.log(i);
 }
-//R:0,2,4,6,8,10,12,14
+//Resp: 0, 2, 4, 6, 8, 10, 12, 14
 
 /** 13 **/
 for (var i = 0; i < 3; i++) { //i=0>1>2>3
@@ -125,7 +128,7 @@ for (var i = 0; i < 3; i++) { //i=0>1>2>3
         console.log(i * j);
     }
 }
-//R:0,0,0,1,0,2
+//Resp: 0, 0, 0, 1, 0, 2
 
 /** 14 **/
 function looping(x, y) { //x=3; y=3
@@ -138,7 +141,7 @@ function looping(x, y) { //x=3; y=3
 }
 z = looping(3, 3); //z= undefined
 console.log(z); //undefined
-//R:0,0,0,0,1,2,0,2,4,undefined
+//Resp: 0, 0, 0, 0, 1, 2, 0, 2, 4, undefined
 
 /** 15 **/
 function looping(x, y) { // x= 3; y= 5
@@ -152,10 +155,11 @@ function looping(x, y) { // x= 3; y= 5
 }
 z = looping(3, 5); //z= 15
 console.log(z); //15
-//R:0,0,0,0,0,0,1,2,3,4,0,2,4,6,8,15
+//Resp: 0, 0, 0, 0, 0, 0, 1, 2, 3, 4, 0, 2, 4, 6, 8, 15
 
 /**
- * 2 parte
+ ///* 2 parte///
+ * 
  * 1.-Por favor, completa los siguientes códigos para que 
  * la función imprima (print) todos los enteros (integers) de 1 a x.
  *  Si x es negativo, haz que se muestre (print/log) “número negativo” 
@@ -177,7 +181,7 @@ printUpTo(1000); // debería imprimir todos los enteros de 1 to 1000
 y = printUpTo(-10); // y = false
 console.log(y); // debería imprimir false
 
-//R=1,2,3,4,5,6,7,8,9,10...1000,"numero negativo",false
+//Resp= 1, 2, 3, 4, 5, 6, 7, 8, 9, 10...1000,"numero negativo",false
 
 /**
  * 2.-Completa el código de más abajo para que la función imprima enteros (integers)
@@ -196,7 +200,7 @@ function printSum(x) { //x=255
 }
 y = printSum(255) // debería imprimir todos los enteros de 0 a 255 y que cada entero imprima la suma parcial.
 console.log(y) // debería imprimir 32640-255-254
-    //R: 0,1,2,...255
+    //Resp: 0, 1, 2,...255
 
 
 /**
