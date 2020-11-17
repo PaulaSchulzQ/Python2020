@@ -162,10 +162,13 @@ console.log(maxminavg([1, 5, 10, -2]));
 //12/ Intercambia Valores: Escribe una función que intercambie el primer y el último valor de cualquier array.
 // La extensión mínima predeterminada del array es 2 (ej: [1,5,10,-2] será [-2,5,10,1]). 
 function cambiaval(array) {
-    ultimo = array[array.length - 1];
-    array[array.length - 1] = array[0];
-    array[0] = ultimo;
-    return array;
+    if (array.length > 1) {
+        let ultimo = array[array.length - 1];
+        array[array.length - 1] = array[0];
+        array[0] = ultimo;
+        return array;
+    }
+    return false;
 }
 console.log(cambiaval([1, 5, 10, -2]));
 
