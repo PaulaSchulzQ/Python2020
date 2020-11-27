@@ -1,0 +1,42 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Ninjadesapareciendo</title>
+    <script type="text/javascript" src='http://ajax.googleapis.com/ajax/libs/jquery/1.11.1/jquery.min.js'></script>
+    <script type="text/javascript">
+        $(document).ready(function() {
+            $("img").click(function() {
+                $(this).hide();
+            });
+            $("#boton").click(function() {
+                $("img").show();
+            })
+        })
+    </script>
+    <link rel="stylesheet" type="text/css" href="ninja.css">
+    <style type="text/css"></style>
+
+</head>
+
+<body>
+    <div class="contenedor">
+        <h1>JQuery Ninja desapareciendo</h1>
+        <img src="goku1.jpg">
+        <img src="goku2.jpg">
+        <img src="goku3.jpg">
+        <img src="goku4.jpg">
+        <img src="goku5.jpg">
+        <img src="goku6.jpg">
+        <img src="goku7.jpg">
+        <img src="goku8.jpg">
+        <button id="boton">Restaurar</button>
+    </div>
+
+
+
+</body>
+
+</html>
