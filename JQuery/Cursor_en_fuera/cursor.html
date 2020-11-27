@@ -1,0 +1,35 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <script type="text/javascript" src='http://ajax.googleapis.com/ajax/libs/jquery/1.11.1/jquery.min.js'></script>
+    <script type="text/javascript">
+        $(document).ready(function() {
+            $("img").hover(function() {
+                var temp = $(this).attr('src');
+                $(this).attr("src", $(this).attr("data-alt-src"));
+                $(this).attr("data-alt-src", temp);
+            })
+        })
+    </script>
+    <link rel="stylesheet" type="text/css" href="cursor.css">
+    <style type="text/css"></style>
+
+</head>
+
+<body>
+    <div class="container">
+        <img src="pregunta.jpg" data-alt-src="1.jpg">
+        <img src="pregunta.jpg" data-alt-src="2.jfif">
+        <img src="pregunta.jpg" data-alt-src="3.jpg">
+        <img src="pregunta.jpg" data-alt-src="4.png">
+        <img src="pregunta.jpg" data-alt-src="5.jpg">
+        <img src="pregunta.jpg" data-alt-src="6.jpg">
+    </div>
+
+</body>
+
+</html>

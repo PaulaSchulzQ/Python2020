@@ -1,0 +1,17 @@
+* {
+    margin: 0px;
+    padding: 0px;
+}
+
+.container {
+    width: 680px;
+    background-color: grey;
+    padding: 10px;
+}
+
+img {
+    width: 200px;
+    margin: 5px;
+    border: 2px solid rgb(97, 95, 95);
+    border-radius: 5px;
+}
