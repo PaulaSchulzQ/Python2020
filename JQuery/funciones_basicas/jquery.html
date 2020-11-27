@@ -1,0 +1,192 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>JQuery Funciones Basicas</title>
+    <script type="text/javascript" src='http://ajax.googleapis.com/ajax/libs/jquery/1.11.1/jquery.min.js'></script>
+    <script type="text/javascript">
+        $(document).ready(function() {
+            $("#baddclass").click(function() {
+                $("#padd").addClass("red");
+            });
+
+            $("#btoggle").click(function() {
+                $("#ptoggle").toggle();
+            });
+
+            $("#bhide").click(function() {
+                $(".phidesh").hide();
+            });
+
+            $("#bshow").click(function() {
+                $(".phidesh").show();
+            });
+
+            $("#bdown").click(function() {
+                $(".pslide").slideDown();
+            });
+
+            $("#bup").click(function() {
+                $(".pslide").slideUp();
+            });
+
+            $("#bstoggle").click(function() {
+                $(".img1").slideToggle();
+            });
+
+            $("#bfadeout").click(function() {
+                $("#img2").fadeOut();
+            });
+
+            $("#bfadein").click(function() {
+                $("#img2").fadeIn();
+            });
+
+            $('#bbefore').click(function() {
+                $('#pbefaf').before("<p>Perrito</p>")
+            });
+
+            $('#bafter').click(function() {
+                $('#pbefaf').after("<p>Perrito</p>")
+            });
+
+            $("#bappend").click(function() {
+                $("#pappend").append("<p>Perruno</p>")
+            })
+
+            $('#bhtml').click(function() {
+                $('#phtml').html("<a href='https://www.nationalgeographic.com.es/animales/perros'>Mas sobre perrunos</a>");
+            });
+
+            $("#battr").click(function() {
+                $("#img3").attr("width", "400");
+            })
+
+            $("#bvalue").keyup(function() {
+                var value = $(this).val();
+                $("#pvalue").text(value);
+            })
+
+            $('#btext').click(function() {
+                $('#ptext').text("Los perrunos son lo mejor :D");
+            });
+        })
+    </script>
+    <link rel="stylesheet" type="text/css" href="jqfuncbasicas.css">
+    <style type="text/css"></style>
+</head>
+
+<body>
+    <div class="container">
+
+        <div class="subcontainer">
+            <h1>ADDCLASS</h1>
+            <div class="subcontainer2">
+                <button id="baddclass">Addclass</button>
+                <p id="padd">Al hacer click en el boton, este parrafo se pondrá rojo</p>
+            </div>
+        </div>
+
+        <div class="subcontainer">
+            <h1>TOGGLE</h1>
+            <div class="subcontainer2">
+                <button id="btoggle">Toggle</button>
+                <p id="ptoggle"> Hacer click en el boton para alternar el parrafo</p>
+            </div>
+        </div>
+
+
+        <div class="subcontainer">
+            <h1>HIDE & SHOW</h1>
+            <div class="subcontainer2">
+                <button id="bhide">Hide</button>
+                <button id="bshow">Show</button>
+                <p class="phidesh">ocultar y mostrar</p>
+            </div>
+
+        </div>
+
+        <div class="subcontainer">
+            <h1>SLIDE UP & SLIDE DOWn</h1>
+            <div class="subcontainer2">
+                <button id="bup">Slide Up</button>
+                <button id=bdown>Slide down</button>
+                <p class="pslide"> Al hacer click en el boton desaparecerá hacia arriba y aparecera hacia abajo el parrafo</p>
+            </div>
+        </div>
+
+        <div class="subcontainer">
+            <h1>Slide Toggle</h1>
+            <div class="subcontainer2">
+                <button id="bstoggle">Slide Toggle</button>
+                <p>Al hacer click, el perrito se esconde</p>
+                <img class="img1" src="escondido.jfif" width="300">
+            </div>
+        </div>
+
+        <div class="subcontainer">
+            <h1>FadeIn & FadeOut</h1>
+            <div class="subcontainer2">
+                <button id="bfadein">Fade In</button>
+                <button id="bfadeout">Fade Out</button>
+                <p> Al hacer click en el boton, el perrito aparece y desaparece</p>
+                <img id="img2" src="Escondida.jpg" width="300">
+            </div>
+        </div>
+
+        <div class="subcontainer">
+            <h1>Before & After</h1>
+            <div class="subcontainer2">
+                <button id="bbefore">Before</button>
+                <button id="bafter">After</button>
+                <p id="pbefaf">Al hacer click, segun el boton agregará "Perrito" al principio o alfinal del parrafo.</p>
+            </div>
+        </div>
+
+        <div class="subcontainer">
+            <h1>Append</h1>
+            <div class="subcontainer2">
+                <button id="bappend">Append</button>
+                <p id="pappend">Al hacer click en el boton, adjuntara una nueva palabra. "Perruno"</p>
+            </div>
+        </div>
+
+        <div class="subcontainer">
+            <h1>HTML</h1>
+            <div class="subcontainer2">
+                <button id=bhtml>Html</button>
+                <p id=phtml>Al hacer click en el boton el parrafo mostrara un link</p>
+            </div>
+        </div>
+
+        <div class="subcontainer">
+            <h1>ATTRIBUTE</h1>
+            <div class="subcontainer2">
+                <button id="battr">Attr</button>
+                <p>Al hacer click en el boton podras cambiar el atributo width de la imagen</p>
+                <img id="img3" src="atributo.jpg" width="300">
+            </div>
+        </div>
+
+        <div class="subcontainer">
+            <h1>Show Value</h1>
+            <div class="subcontainer2">
+                <input id='bvalue' type="text" value="Al escribir en el boton se cambia el parrafo"><br>
+                <p id="pvalue">Al escribir en el boton se cambia el parrafo</p>
+            </div>
+        </div>
+
+        <div class="subcontainer">
+            <h1>Insert text</h1>
+            <div class="subcontainer2">
+                <button id="btext">Insert Text</button>
+                <p id="ptext">Al hacer click en el boton se insertará un nuevo texto</p>
+            </div>
+        </div>
+    </div>
+
+</body>
+
+</html>

@@ -1,0 +1,55 @@
+* {
+    margin: 0px;
+    padding: 0px;
+}
+
+.container {
+    width: 970px;
+    background-color: rgb(130, 169, 170);
+    margin: 0px auto;
+    padding: 10px;
+    font-family: sans-serif;
+}
+
+.red {
+    color: red;
+}
+
+.subcontainer {
+    margin-top: 5px;
+    border-top: 3px solid blanchedalmond;
+}
+
+.subcontainer2 {
+    width: 300px;
+    margin-left: 330px;
+    margin-bottom: 10px;
+}
+
+h1 {
+    text-align: center;
+    margin: 20px;
+}
+
+p {
+    text-align: center;
+    margin: 10px;
+}
+
+button {
+    background-color: rgb(193, 216, 223);
+    margin-left: 120px;
+    padding: 5px;
+}
+
+img {
+    display: inline-block;
+    text-align: center;
+    border: 2px solid black;
+    border-radius: 5px;
+}
+
+input {
+    margin-left: 60px;
+    padding: 5px;
+}
