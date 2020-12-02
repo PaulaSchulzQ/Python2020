@@ -1,0 +1,51 @@
+Welcome! If you are new to the game, here are some tips: 
+ 
+Look at your surroundings with the command "ls". 
+Move to a new location with the command "cd LOCATION" 
+You can backtrack with the command "cd ..". 
+Interact with things in the world with the command "less ITEM" 
+ 
+If you forget where you are, type "pwd" 
+ 
+Go ahead, explore. We hope you enjoy what you find. Do ls as your first command.
+
+>ls
+ Locations: 
+WesternForest
+NorthernMeadow
+MIT
+ Items: 
+WelcomeLetter
+
+>pwd
+You are in Home.
+
+>cd WesternForest
+You have moved to WesternForest. You enter and travel deep into the forest. Eventually, the path leads to a 
+clearing with a large impressive building. A sign on it reads: Spell Casting Academy: The Elite School of 
+Magic. 
+>cd ..
+You have moved to Home. You are in the comfort of your own home.
+>cd NorthernMeadow
+You have moved to NorthernMeadow. This is a beautiful green meadow. A plump but majestic pony prances happily 
+about. 
+>cd ..
+You have moved to Home. You are in the comfort of your own home.
+>cd MIT
+You have moved to MIT. You have arrived by magic carpet to MIT!
+
+>cd ..
+You have moved to Home. You are in the comfort of your own home.
+>less WelcomeLetter
+Welcome! If you are new to the game, here are some tips: 
+ 
+Look at your surroundings with the command "ls". 
+Move to a new location with the command "cd LOCATION" 
+You can backtrack with the command "cd ..". 
+Interact with things in the world with the command "less ITEM" 
+ 
+If you forget where you are, type "pwd" 
+ 
+Go ahead, explore. We hope you enjoy what you find. Do ls as your first command.
+ 
+
