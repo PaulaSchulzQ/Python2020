@@ -1,0 +1,53 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>POKEDEX</title>
+    <link rel="stylesheet" type="text/css" href="pokedexstyle.css">
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.2.1/jquery.min.js"></script>
+    <script>
+        $(document).ready(function() {
+            for (var i = 1; i <= 151; i++) {
+                $("#poke").append(`<img id="${i}"src="https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/pokemon/shiny/${i}.png">`)
+            }
+            $("img").click(function() {
+                var id = this.id;
+                $.get("https://pokeapi.co/api/v2/pokemon/" + id, function(res) {
+                    var html_str = "";
+                    html_str += "<h1>" + res.name + "</h1>"
+                    html_str += `<img src="https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/pokemon/shiny/${id}.png" id="${id}">`
+                    html_str += "<h4>Types</h4>";
+                    html_str += "<ul>";
+                    for (var i = 0; i < res.types.length; i++) {
+                        html_str += "<li>" + res.types[i].type.name + "</li>";
+                    }
+                    html_str += "</ul>";
+                    html_str += "<h4>Height</h4>"
+                    html_str += "<p>" + res.height + "</p>"
+                    html_str += "<h4>Weight</h4>"
+                    html_str += "<p>" + res.weight + "</p>"
+
+                    $("#informacion").html(html_str);
+                    $('html, body').animate({
+                        scrollTop: 0
+                    }, 600);
+                }, "json");
+            })
+        })
+    </script>
+</head>
+
+<body>
+    <div id="contenedor">
+        <div id="poke">
+            <h1>¿Cuál es ese Pókemon?</h1>
+        </div>
+
+        <div id="informacion"></div>
+    </div>
+
+</body>
+
+</html>

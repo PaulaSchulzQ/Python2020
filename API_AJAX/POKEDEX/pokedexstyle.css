@@ -1,0 +1,42 @@
+#contenedor {
+    width: 970px;
+    background-color: gray;
+    margin: 0px auto;
+    padding: 10px;
+}
+
+#poke {
+    width: 600px;
+    margin: 10px;
+    padding: 10px;
+    display: inline-block;
+    vertical-align: top;
+}
+
+#informacion {
+    width: 200px;
+    margin-left: 20px;
+    margin-top: 100px;
+    display: inline-block;
+    vertical-align: top;
+    text-align: center;
+    border: teal solid 20px;
+    padding: 6px 10px 12px 10px;
+}
+
+h1 {
+    color: bisque;
+    text-align: center;
+}
+
+h4 {
+    text-align: initial;
+}
+
+ul {
+    text-align: initial;
+}
+
+p {
+    text-align: initial;
+}
