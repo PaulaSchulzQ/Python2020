@@ -1,6 +1,0 @@
-   man git// 
-    man gittutorial //
-    man git-add //
-    man git-commit //
-    man git-push //
-    man git-remote //
