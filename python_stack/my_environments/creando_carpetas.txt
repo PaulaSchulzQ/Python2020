@@ -1,0 +1,61 @@
+Paula@DESKTOP-COA2T21 MINGW64 ~ (master)
+$ cd Desktop/
+
+Paula@DESKTOP-COA2T21 MINGW64 ~/Desktop (master)
+$ cd PYTHON/
+
+Paula@DESKTOP-COA2T21 MINGW64 ~/Desktop/PYTHON (master)
+$ mkdir python_stack
+
+Paula@DESKTOP-COA2T21 MINGW64 ~/Desktop/PYTHON (master)
+$ cd python_stack/
+
+Paula@DESKTOP-COA2T21 MINGW64 ~/Desktop/PYTHON/python_stack (master)
+$ mkdir my_environments
+
+Paula@DESKTOP-COA2T21 MINGW64 ~/Desktop/PYTHON/python_stack (master)
+$ mkdir python
+
+Paula@DESKTOP-COA2T21 MINGW64 ~/Desktop/PYTHON/python_stack (master)
+$ cd python/
+
+Paula@DESKTOP-COA2T21 MINGW64 ~/Desktop/PYTHON/python_stack/python (master)
+$ mkdir fundamentals
+
+Paula@DESKTOP-COA2T21 MINGW64 ~/Desktop/PYTHON/python_stack/python (master)
+$ mkdir OOP
+
+Paula@DESKTOP-COA2T21 MINGW64 ~/Desktop/PYTHON/python_stack/python (master)
+$ cd -
+/c/Users/Paula/Desktop/PYTHON/python_stack
+
+Paula@DESKTOP-COA2T21 MINGW64 ~/Desktop/PYTHON/python_stack (master)
+$ mkdir flask
+
+Paula@DESKTOP-COA2T21 MINGW64 ~/Desktop/PYTHON/python_stack (master)
+$ cd flask/
+
+Paula@DESKTOP-COA2T21 MINGW64 ~/Desktop/PYTHON/python_stack/flask (master)
+$ mkdir flask_fundamentals
+
+Paula@DESKTOP-COA2T21 MINGW64 ~/Desktop/PYTHON/python_stack/flask (master)
+$ mkdir flask_mysql
+
+Paula@DESKTOP-COA2T21 MINGW64 ~/Desktop/PYTHON/python_stack/flask (master)
+$ cd -
+/c/Users/Paula/Desktop/PYTHON/python_stack
+
+Paula@DESKTOP-COA2T21 MINGW64 ~/Desktop/PYTHON/python_stack (master)
+$ mkdir django
+
+Paula@DESKTOP-COA2T21 MINGW64 ~/Desktop/PYTHON/python_stack (master)
+$ cd django/
+
+Paula@DESKTOP-COA2T21 MINGW64 ~/Desktop/PYTHON/python_stack/django (master)
+$ mkdir django_intro
+
+Paula@DESKTOP-COA2T21 MINGW64 ~/Desktop/PYTHON/python_stack/django (master)
+$ mkdir django_orm
+
+Paula@DESKTOP-COA2T21 MINGW64 ~/Desktop/PYTHON/python_stack/django (master)
+$ mkdir django_full_stack
