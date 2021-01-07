@@ -1,0 +1,96 @@
+Ejecuta los siguientes comandos:
+
+-> pip list // Esto muestra los paquetes instalados en el entorno virtual
+
+-> deactivate // Esto desactivará tu entorno virtual
+
+-> pip3 list  (¿En qué se diferencia el resultado de cuando ejecutó pip listcon virtualenv activado? 
+// No se observa el nombre del entorno
+
+->  source myEnvironments/py3Env/bin/activate (Ajusta la ruta según sea necesario para reactivar el virtualenv ;
+ para Windows call myEnvironments/py3Env/Scripts/activate)
+// En git bash se usa source, es para activar el entorno.
+
+->  pip install Django==1.11.9 (Sabemos que ya ejecutó este. 
+¿Qué información ves devuelta en la terminal después de este comando?)
+//Paula@DESKTOP-COA2T21 MINGW64 ~/Desktop/PYTHON/python_stack/my_environments (master)
+$ pip install Django==1.11.9
+Collecting Django==1.11.9
+  Using cached Django-1.11.9-py2.py3-none-any.whl (6.9 MB)
+Collecting pytz
+  Using cached pytz-2020.5-py2.py3-none-any.whl (510 kB)
+Installing collected packages: pytz, Django
+Successfully installed Django-1.11.9 pytz-2020.5
+
+
+->  pip freeze (¿Cuál es la diferencia entre congelar y lista?)
+//  retorna una lista de paquetes instalados similar, pero el formato de salida es el requerido por pip install
+
+->  En primer CD en el directorio Escritorio ( cd ~/Desktop), 
+a continuación, ejecuta este comando: pip freeze > requirements.txt. 
+¿Qué ves cuando tú ls? ¿Qué hay dentro de este archivo?
+// Paula@DESKTOP-COA2T21 MINGW64 ~/Desktop (master)
+$ ls
+'CELULAR LUCY'/                           'OTROS DOCUMENTOS'/
+ codigo.txt                                PELICULAS/
+'DOCUMENTOS IMPORTANTES'/                 'Plantilla Plan de Búsqueda.xlsx'
+'Git Bash.lnk'*                            PYTHON/
+ IMAGENES/                                 requirements.txt
+'ING COMERCIAL'/                          'respaldo clases python'/
+ MEGAsync.lnk*                             Ubuntu.lnk*
+ musica/                                   VScode/
+'MySQL Workbench 8.0 CE.lnk'*             'XAMPP Control Panel.lnk'*
+'Nuevo Documento de Microsoft Word.docx'
+
+Paula@DESKTOP-COA2T21 MINGW64 ~/Desktop (master)
+$
+
+->  pip uninstall Django
+//Paula@DESKTOP-COA2T21 MINGW64 ~/Desktop (master)
+$ pip uninstall Django
+Found existing installation: Django 1.11.9
+Uninstalling Django-1.11.9:
+  Would remove:
+    c:\users\paula\appdata\local\programs\python\python39\lib\site-packages\django-1.11.9.dist-info\*
+    c:\users\paula\appdata\local\programs\python\python39\lib\site-packages\django\*
+    c:\users\paula\appdata\local\programs\python\python39\scripts\django-admin.exe
+    c:\users\paula\appdata\local\programs\python\python39\scripts\django-admin.py
+ Successfully uninstalled Django-1.11.9
+
+->  pip show Django
+// Paula@DESKTOP-COA2T21 MINGW64 ~/Desktop (master)
+$  pip show Django
+Name: Django
+Version: 1.11.9
+Summary: A high-level Python Web framework that encourages rapid development and clean, pragmatic design.
+Home-page: https://www.djangoproject.com/
+Author: Django Software Foundation
+Author-email: foundation@djangoproject.com
+License: BSD
+Location: c:\users\paula\appdata\local\programs\python\python39\lib\site-packages
+Requires: pytz
+Required-by:
+
+
+->  pip search Flask Este podría tomar un momento para ejecutarse.
+Paula@DESKTOP-COA2T21 MINGW64 ~/Desktop (master)
+$ pip search Flask
+Traceback (most recent call last):
+  File "c:\users\paula\appdata\local\programs\python\python39\lib\site-packages\pip\_internal\cli\base_command.py", line 224, in _main
+    status = self.run(options, args)
+  File "c:\users\paula\appdata\local\programs\python\python39\lib\site-packages\pip\_internal\commands\search.py", line 62, in run
+    pypi_hits = self.search(query, options)
+  File "c:\users\paula\appdata\local\programs\python\python39\lib\site-packages\pip\_internal\commands\search.py", line 82, in search
+    hits = pypi.search({'name': query, 'summary': query}, 'or')
+  File "c:\users\paula\appdata\local\programs\python\python39\lib\xmlrpc\client.py", line 1116, in __call__
+    return self.__send(self.__name, args)
+  File "c:\users\paula\appdata\local\programs\python\python39\lib\xmlrpc\client.py", line 1456, in __request
+    response = self.__transport.request(
+  File "c:\users\paula\appdata\local\programs\python\python39\lib\site-packages\pip\_internal\network\xmlrpc.py", line 46, in request
+    return self.parse_response(response.raw)
+  File "c:\users\paula\appdata\local\programs\python\python39\lib\xmlrpc\client.py", line 1348, in parse_response
+    return u.close()
+  File "c:\users\paula\appdata\local\programs\python\python39\lib\xmlrpc\client.py", line 662, in close
+    raise Fault(**self._stack[0])
+xmlrpc.client.Fault: <Fault -32500: "RuntimeError: PyPI's XMLRPC API has been temporarily disabled due to unmanageable load and will be deprecated in the near future. See https://status.python.org/ for more information.">
+
