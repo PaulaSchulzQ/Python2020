@@ -23,11 +23,11 @@ dojo = {
 #Minh
 #Devon
 
-def printInfo(some_dict):
-    for key in some_dict:
-        print(len(some_dict[key]), key.upper())
-        for each_list_value in some_dict[key]:
-            print(each_list_value)
+def printInfo(algun_dicc):
+    for i in algun_dicc:
+        print(len(algun_dicc[i]))
+        for valor_listas in algun_dicc[i]:
+            print(valor_listas)
         print("")
 
 print(printInfo(dojo))
