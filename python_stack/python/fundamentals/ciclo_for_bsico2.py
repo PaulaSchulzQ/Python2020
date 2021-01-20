@@ -92,33 +92,27 @@ print(maximo([37,1,2,3,-9]))
 #suma total, promedio, mínimo, máximo y longitud de la lista.
 #Ejemplo: ultimate_analysis ([37,2,1, -9]) debería devolver {'totalTotal': 31, 'promedio': 7.75, 'mínimo': -9, 'máximo': 37, 'longitud': 4}
 def final(arr):
-    suma=(0)
-    for i in arr:
-        suma+=i
-    promedio=suma/len(arr)
-    val_min=arr[0]
-    for i in arr:
-        if i<=val_min:
-            val_min=i
-            if i>val_min:
-                val_min=val_min
-    val_max=arr[0]
-    for i in arr:
-        if i>=val_max:
-            val_max=i
-            if i<val_max:
-                val_max=val_max
-    longitud=len(arr)
     diccionario={
-        "suma":suma,
-        "promedio":promedio,
-        "minimo":val_min,
-        "maximo":val_max,
-        "longitud":longitud
+        "suma":suma_total(arr),
+        "promedio":promedio(arr),
+        "minimo":minimo(arr),
+        "maximo":maximo(arr),
+        "longitud":len(arr)
     }
     return diccionario
 
 print(final([2,3,5,7,4,88,3,-4]))
+
+def ultimate_analysis(list):
+    diccionario = {}
+    diccionario.update({"totalTotal": sum_total(list)})
+    diccionario.update({"promedio": promedio(list)})
+    diccionario.update({"minimo": minimo(list)})
+    diccionario.update({"maximo": maximo(list)})
+    diccionario.update({"longitud": longitud(list)})
+    return diccionario
+print(ultimate_analysis([37, 2, 1, -9]))
+
 
 #Lista inversa : crea una función que tome una lista y la devuelva con los valores invertidos. Haz esto sin crear una segunda lista. 
 #(Se sabe que este desafío aparece durante las entrevistas técnicas básicas).

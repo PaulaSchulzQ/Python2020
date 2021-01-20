@@ -26,3 +26,41 @@ print(sports_directory)
     #Camba el valor 20 en z a 30
 z[0]["y"]=30
 print(z)
+
+#2.- Itera a través de una lista de diccionarios
+#Crea una función iterateDictionary(some_list)que, dada una lista de diccionarios,
+# la función recorra cada diccionario de la lista e imprime cada clave y el valor asociado. Por ejemplo, dada la siguiente lista:
+students = [
+         {'first_name':  'Michael', 'last_name' : 'Jordan'},
+         {'first_name' : 'John', 'last_name' : 'Rosales'},
+         {'first_name' : 'Mark', 'last_name' : 'Guillen'},
+         {'first_name' : 'KB', 'last_name' : 'Tonel'}
+    ]
+#iterateDictionary(students) 
+# La salida debería ser: (Está bien si cada clave y valor quedan en dos líneas separadas)
+# Bonus: Hacer que aparezcan exactamente así!
+#first_name - Michael, last_name - Jordan
+#first_name - John, last_name - Rosales
+#first_name - Mark, last_name - Guillen
+#first_name - KB, last_name - Tonel
+
+def iterateDictionary(students):
+    for i in students:
+        print("first_name -", i["first_name"]+", " "last_name -", i["last_name"],)
+print(iterateDictionary(students))
+
+#3.- Obtén valores de una lista de diccionarios
+#Crea una función iterateDictionary2(key_name, some_list)que, dada una lista de diccionarios y un nombre de clave, la función 
+#imprima el valor almacenado en esa clave para cada diccionario. Por ejemplo, iterateDictionary2 ('first_name', students) debería generar:
+#Michael
+#John
+#Mark
+#KB
+#Y iterateDictionary2('last_name', students) debería generar:
+#Jordan
+#Rosales
+#Guillen
+#Tonel
+
+
+
