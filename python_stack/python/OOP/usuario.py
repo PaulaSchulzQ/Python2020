@@ -21,7 +21,7 @@ class User:
             self.account_balance-=amount
         else:
             print("Saldo insuficiente")
-            return self
+        return self
     def display_user_balance(self):
         print(self.name, self.account_balance)
         return self
@@ -30,14 +30,10 @@ guido = User("Guido van Rossum", "guido@python.com")
 monty = User("Monty Python", "monty@python.com")
 bicho= User("Vicente P", "vicente@python.com")
 
-guido.make_deposit(100).make_deposit(200).make_deposit(300).make_withdrawal(80).display_user_balance()
-print()
+guido.make_deposit(200).make_withdrawal(100).display_user_balance()
 
-monty.make_deposit(200).make_deposit(300).make_withdrawal(250)
-monty.display_user_balance()
-print()
+monty.make_deposit(200).make_deposit(300).make_withdrawal(250).display_user_balance()
 
-bicho.make_deposit(500).make_deposit(20).make_withdrawal(50)
-bicho.display_user_balance()
+bicho.make_deposit(500).make_deposit(20).make_withdrawal(50).display_user_balance()
 
 
