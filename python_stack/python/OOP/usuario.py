@@ -30,10 +30,10 @@ guido = User("Guido van Rossum", "guido@python.com")
 monty = User("Monty Python", "monty@python.com")
 bicho= User("Vicente P", "vicente@python.com")
 
-guido.make_deposit(200).make_withdrawal(100).display_user_balance()
+guido.make_deposit(200).make_deposit(100).make_deposit(300).make_withdrawal(100).display_user_balance()
 
-monty.make_deposit(200).make_deposit(300).make_withdrawal(250).display_user_balance()
+monty.make_deposit(200).make_deposit(300).make_withdrawal(250).make_withdrawal(30).display_user_balance()
 
-bicho.make_deposit(500).make_deposit(20).make_withdrawal(50).display_user_balance()
+bicho.make_deposit(500).make_withdrawal(20).make_withdrawal(50).make_withdrawal(100).display_user_balance()
 
 
