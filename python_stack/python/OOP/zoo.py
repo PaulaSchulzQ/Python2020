@@ -36,10 +36,6 @@ class Leones(Animals):
     def __init__(self, name, age):
         super().__init__(name, age, 30, 100)
 
-    def display_info(self):
-        print('\nNombre:\t', self.name, '\nEdad:\t', self.age, '\nNivel de salud:\t', self.nivel_salud, '\nNivel de felicidad:\t', self.nivel_felicidad)
-        return self
-
     def alimentacion(self):
         self.nivel_salud += 50
         self.nivel_felicidad += 200
@@ -58,6 +54,10 @@ class Osos(Animals):
     def alimentacion(self):
         self.nivel_salud += 30
         self.nivel_felicidad += 20
+
+    def display_info(self):
+        print('\nNombre:\t', self.name, '\nEdad:\t', self.age, '\nNivel de salud:\t', self.nivel_salud, '\nNivel de felicidad:\t', self.nivel_felicidad)
+        return self
 
 
 zoologico=Zoo("Zoologico Temuco")
