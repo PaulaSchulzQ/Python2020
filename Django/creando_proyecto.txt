@@ -1,0 +1,92 @@
+----PASOS PARA CREAR UN PROYECTO------ EN PYCHARM
+
+1.- AL ABRIR PYCHARM EN FILE, NUEVO PROYECTO, SE UBICA EN PYCHARM, 
+   luego se busca ruta en donde se guardara el proyecto, carpeta, (aqui se crea el ambiente env)
+   -- se deja VIRTUALENV-- click en create.
+
+2.- INSTALAR DJANGO --> en file, settings, se busca el proyecto, python interpreter, se apreta el + de abajito. 
+ --se instala django para poder usar rutas o urls y asi usar diccionarios u otra informacion--
+
+3.- CREANDO PROYECTO --> en la terminal de pycharm se escribe el comando: django-admin startproject nombredel_proyecto
+
+(en coding dojo muestra esto luego de crear el proyecto:
+Vamos a probar esto:
+Navega a la carpeta que acaba de crear. Se acaba de crear un nuevo proyecto de Django. ¡Ejecútalo!
+django_intro> cd your_project_name_here
+your_project_name_here> python manage.py runserver
+Ir a localhost:8000.. ¡Hurra por las CLI (interfaces de línea de comandos)!
+(No se preocupe por la advertencia sobre migraciones no aplicadas. No nos afectará por ahora).
+Escriba ctrl-cpara detener el servidor. Abra la carpeta del proyecto en su editor de texto.)
+
+4.- CREANDO APP --> EN LA TERMINAL SE ESCRIBE: PYTHON MANAGE.PY STARTAPP NOMBRE_APP 
+ --tambien se puede a traves de TOOLS (que es como otra terminal para ahorrar comandos de manage) aqui se escribe 
+  >startapp nombre_de_app
+
+
+5.-EN URLS.PY (o nombreproyecto\urls.py   que es lo mismo, cambia cuando se crea la app)
+--> se añade include en 
+from django.urls import path, include           # import include
+# from django.contrib import admin              # comment out, or just delete
+urlpatterns = [
+    path('', include('your_app_name_here.urls'),	   
+    # path('admin/', admin.sites.urls)         # comment out, or just delete
+]
+
+---aqui estamos llamando nuestra app desde nuestro proyecto, path  indica que en '' es la ruta madre,
+   y include es que se esta incluyendo de django e incluria nuestra app las urls en la app.
+	path hace el llamado, include incluye las urls de la app
+
+
+6.- EN SETTINGS --> SE INCLUYE LA NUEVA APP
+   INSTALLED_APPS = [
+       'your_app_name_here', # added this line. Don't forget the comma!!
+       'django.contrib.admin',
+       'django.contrib.auth',
+       'django.contrib.contenttypes',
+       'django.contrib.sessions',
+       'django.contrib.messages',
+       'django.contrib.staticfiles',
+   ]    # the trailing comma after the last item in a list, tuple, or dictionary is commonly accepted in Python
+
+----CONFIGURANDO LA APP----
+  
+7.- EN LA CARPETA DE LA APP SE CREA UN NUEVO ARCHIVO PY --> URLS
+	AQUI (NOMBREAPP.URLS.PY) SE AÑADE:
+	from django.urls import path     
+from . import views
+urlpatterns = [
+    path('', views.index),	   
+]
+
+  --- aqui se importa path es la ruta que nos va a dirigir, 
+   tambien se importa views que es la ruta hacia donde nos dirigiremos, 
+   para que sea reconocido por nuestra ruta,  e index es el metodo que se va a utilizar--
+
+
+8.- EN VIEWS.PY DE LA APP SE COLOCA LA FUNCION INDICE:
+from django.shortcuts import render, HttpResponse
+def index(request):
+    return HttpResponse("this is the equivalent of @app.route('/')!")
+	
+  --- views es el controlador de nuestro backend, 
+  es donde realizamos todos nuestros metodos y/o funciones para nuestra app e importaciones---
+  --- render httpresponse redirect son las 3 importaciones mas utilizadas----
+  --- render toma la respuesta---
+  --- request es para ingresar la solicitud----
+  --- render(request, 'index.html', context=) context devuelve datos al html
+  --- redirect('index.html') solo devuelve una ruta---
+ 
+
+la redireccion se hace en views, y la ruta debe estar en urls de la app
+
+para crear los metodos 
+
+se crean en views con
+ def NOMBREMETODO(request)
+ 	return Httpresponse/redirect/render('loquequieroquehaga')
+
+despues en app.urls.py
+se agrega la url
+ path('RUTA', views.NOMBREMETODO),
+
+
