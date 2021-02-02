@@ -1,0 +1,19 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Time</title>
+    {% load static %}
+      <link rel="stylesheet" href="{% static 'css/style.css' %}">
+      <script src="{% static 'js/script.js' %}"></script>
+</head>
+<body>
+<div id="contenedor">
+    <div id="bloque1">
+        <h1>Hora Actual</h1>
+<p>Hora: {{ time }}</p>
+    </div>
+</div>
+
+</body>
+</html>

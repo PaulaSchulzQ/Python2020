@@ -1,0 +1,17 @@
+#contenedor {
+    width: 970px;
+    margin: 0px auto;
+}
+
+#bloque1 {
+    width: 500px;
+    background: linear-gradient(cadetblue, #fdfdfd);
+    color: darkblue;
+    display: inline-block;
+    vertical-align: top;
+    padding-left: 100px;
+    margin-left: 200px;
+    font-family: "Comic sans MS";
+    font-size: 30px;
+    font-weight: bold;
+}
