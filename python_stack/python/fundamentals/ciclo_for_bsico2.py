@@ -105,7 +105,7 @@ print(final([2,3,5,7,4,88,3,-4]))
 
 def ultimate_analysis(list):
     diccionario = {}
-    diccionario.update({"totalTotal": sum_total(list)})
+    diccionario.update({"suma": suma_total(list)})
     diccionario.update({"promedio": promedio(list)})
     diccionario.update({"minimo": minimo(list)})
     diccionario.update({"maximo": maximo(list)})
