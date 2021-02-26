@@ -1,0 +1,188 @@
+=============LIBROS AUTORES SHELL==============
+
+ 1.---Crear el modelo de clase de libro
+
+class Book(models.Model):
+    title = models.CharField(max_length=255)
+    desc = models.TextField()
+    created_at = models.DateTimeField(auto_now_add=True)
+    updated_at = models.DateTimeField(auto_now=True)
+
+
+ 2.--- Crear el modelo de clase de autor
+
+class Author(models.Model):
+    first_name = models.CharField(max_length=255)
+    last_name = models.CharField(max_length=255)
+    books = models.ManyToManyField(Book, related_name="authors")
+    created_at = models.DateTimeField(auto_now_add=True)
+    updated_at = models.DateTimeField(auto_now=True)
+
+ 3.--- Crea y ejecuta los archivos de migración para crear las tablas en su base de datos.
+
+(venv) C:\Users\Paula\Desktop\Proyectos_django\libros_autores_proj>python manage.py makemigrations
+Migrations for 'libros_autores_app':
+  libros_autores_app\migrations\0001_initial.py
+    - Create model Book
+    - Create model Author
+
+(venv) C:\Users\Paula\Desktop\Proyectos_django\libros_autores_proj>python manage.py migrate
+Operations to perform:
+  Apply all migrations: admin, auth, contenttypes, libros_autores_app, sessions
+Running migrations:
+  Applying contenttypes.0001_initial... OK
+  Applying auth.0001_initial... OK
+  Applying admin.0001_initial... OK
+  Applying admin.0002_logentry_remove_auto_add... OK
+  Applying admin.0003_logentry_add_action_flag_choices... OK
+  Applying contenttypes.0002_remove_content_type_name... OK
+  Applying auth.0002_alter_permission_name_max_length... OK
+  Applying auth.0003_alter_user_email_max_length... OK
+  Applying auth.0004_alter_user_username_opts... OK
+  Applying auth.0005_alter_user_last_login_null... OK
+  Applying auth.0006_require_contenttypes_0002... OK
+  Applying auth.0007_alter_validators_add_error_messages... OK
+  Applying auth.0008_alter_user_username_max_length... OK
+  Applying auth.0009_alter_user_last_name_max_length... OK
+  Applying auth.0010_alter_group_name_max_length... OK
+  Applying auth.0011_update_proxy_permissions... OK
+  Applying auth.0012_alter_user_first_name_max_length... OK
+  Applying libros_autores_app.0001_initial... OK
+  Applying sessions.0001_initial... OK
+
+
+ 4.--- Crea un archivo .txt donde guardará cada una de sus consultas desde abajo
+>>> from libros_autores_app.models import *
+ 
+5.--- Consulta: crea 5 libros con los siguientes nombres: C Sharp, Java, Python, PHP, Ruby
+
+>>> Book.objects.create(title="C Sharp", desc=" lenguaje de programación multiparadigma desarrollado y estandarizado por la empresa Microsoft ")
+<Book: Book object (1)>
+>>> Book.objects.create(title="Java", desc="lenguaje de programación orientado a objetos")
+<Book: Book object (2)>
+>>> Book.objects.create(title="Python", desc=" lenguaje de programación interpretado cuya filosofía hace hincapié en la legibilidad de su código")
+<Book: Book object (3)>
+>>> Book.objects.create(title="PHP", desc="lenguaje de código abierto muy popular especialmente adecuado para el desarrollo web")
+<Book: Book object (4)>
+>>> Book.objects.create(title="Ruby", desc="")
+<Book: Book object (5)>
+
+
+ 6.--- Consulta: Crea 5 autores diferentes: Jane Austen, Emily Dickinson, 
+Fyodor Dostoevksy, William Shakespeare, Lau Tzu
+
+>>> Author.objects.create(first_name="Jane", last_name=" Austen")
+<Author: Author object (1)>
+>>> Author.objects.create(first_name="Emily", last_name="Dickinson")
+<Author: Author object (2)>
+>>> Author.objects.create(first_name="Fyodor", last_name="Dostoevesky")
+<Author: Author object (3)>
+>>> Author.objects.create(first_name="William", last_name="Shakespeare")
+<Author: Author object (4)>
+>>> Author.objects.create(first_name="Lau", last_name="Tzu")
+<Author: Author object (5)>
+
+
+ 7.--- Agregue un nuevo campo de texto en la tabla de autores llamado 'notas'.
+class Author(models.Model):
+    first_name = models.CharField(max_length=255)
+    last_name = models.CharField(max_length=255)
+    notas = models.TextField()
+    books = models.ManyToManyField(Book, related_name="authors")
+    created_at = models.DateTimeField(auto_now_add=True)
+    updated_at = models.DateTimeField(auto_now=True)
+
+ 8.--- Cree y ejecute los archivos de migración para actualizar la tabla en su base de datos.
+
+	python manage.py makemigrations
+	python manage.py migrate
+
+ 9.--- Consulta: cambie el nombre del libro de C Sharp a C #
+	>>> c = Book.objects.get(id=1)
+	>>> c.title = "C #"
+	>>> c.save()
+
+ 10.---Consulta: cambie el nombre del cuarto autor a Bill
+	>>> c= Author.objects.get(id=4)
+	>>> c.first_name="bill"
+	>>> c.save()
+
+ 11.---Consulta: Asigna el primer autor a los primeros 2 libros.
+
+>>> this_author=Author.objects.get(id=1)
+>>> this_book=Book.objects.get(id=1)
+>>> this_author.books.add(this_book)
+>>> this_book=Book.objects.get(id=2)
+>>> this_author.books.add(this_book)
+
+
+ 12.---Consulta: Asigne el segundo autor a los primeros 3 libros.
+
+    this_author = Author.objects.get(id=2)
+
+    this_book = Book.objects.get(id=1)
+    this_author.books.add(this_book)
+
+    this_book = Book.objects.get(id=2)
+    this_author.books.add(this_book)
+
+    this_book = Book.objects.get(id=3)
+    this_author.books.add(this_book)
+
+ 13.---Consulta: Asigna el tercer autor a los primeros 4 libros.
+
+    this_author = Author.objects.get(id=3)
+
+    this_book = Book.objects.get(id=1)
+    this_author.books.add(this_book)
+
+    this_book = Book.objects.get(id=2)
+    this_author.books.add(this_book)
+
+    this_book = Book.objects.get(id=3)
+    this_author.books.add(this_book)
+
+    this_book = Book.objects.get(id=4)
+    this_author.books.add(this_book)
+
+ 14.---Consulta: Asigne el cuarto autor a los primeros 5 libros (o en otras palabras, todos los libros)
+ this_author = Author.objects.get(id=4)
+
+    this_book = Book.objects.get(id=1)
+    this_author.books.add(this_book)
+
+    this_book = Book.objects.get(id=2)
+    this_author.books.add(this_book)
+
+    this_book = Book.objects.get(id=3)
+    this_author.books.add(this_book)
+
+    this_book = Book.objects.get(id=4)
+    this_author.books.add(this_book)
+
+    this_book = Book.objects.get(id=5)
+    this_author.books.add(this_book)
+
+
+ 15.---Consulta: recupera a todos los autores del tercer libro
+	Book.objects.get(id=3).authors.all()
+      
+
+ 16.---Consulta: eliminar al primer autor del tercer libro
+>>> Author.objects.filter(books__id=3).first().delete()
+(4, {'libros_autores_app.Author_books': 3, 'libros_autores_app.Author': 1})
+
+
+ 17.---Consulta: Agregue el quinto autor como uno de los autores del segundo libro.
+Book.objects.get(id=2).authors.add(Author.objects.get(id=5))
+
+ 18.---Consulta: Encuentra todos los libros de los que el tercer autor es parte
+	>>> Author.objects.get(id=3).books.all()
+<QuerySet [<Book: Book object (1)>, <Book: Book object (2)>, <Book: Book object (3)>, <Book: Book object (4)>]>
+
+
+ 19.---Consulta: Encuentra todos los autores que contribuyeron al quinto libro.
+
+	Book.objects.get(id=5).authors.all()
+
+ 20.---Envíe su archivo .txt que contiene todas las consultas que ejecutó en el shell
