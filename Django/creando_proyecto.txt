@@ -66,7 +66,7 @@ urlpatterns = [
 8.- EN VIEWS.PY DE LA APP SE COLOCA LA FUNCION INDICE:
 from django.shortcuts import render, HttpResponse
 def index(request):
-    return HttpResponse("this is the equivalent of @app.route('/')!")
+    return HttpResponse("Hola Mundo")
 	
   --- views es el controlador de nuestro backend, 
   es donde realizamos todos nuestros metodos y/o funciones para nuestra app e importaciones---
